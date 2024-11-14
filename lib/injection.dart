@@ -15,7 +15,6 @@ import 'package:nmms_movie_list/domain/usecases/get_upcoming_movies.dart';
 import 'package:nmms_movie_list/domain/usecases/remove_favorite_movie.dart';
 import 'package:nmms_movie_list/domain/usecases/search_movies.dart';
 import 'package:nmms_movie_list/presentation/bloc/favorite_movie_bloc.dart';
-import 'package:nmms_movie_list/presentation/bloc/filter_bloc.dart';
 import 'package:nmms_movie_list/presentation/bloc/movie_bloc.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -82,5 +81,4 @@ Future<void> init() async {
   getIt.registerFactory(
     () => FavoriteMovieBloc(getIt(), getIt()),
   );
-  getIt.registerFactory(() => FilterBloc());
 }
